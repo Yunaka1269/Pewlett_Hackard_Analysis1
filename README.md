@@ -5,8 +5,11 @@
 ####Result
 
 -Attached is [retire ready employee list with title](https://github.com/Yunaka1269/Pewlett_Hackard_Analysis1/blob/main/Data/retirement_titles.csv). Because of switching the titles over years, there are duplicate entries in database for some employees.
+
 -Attached shows [retire ready employee list with current/unique title](https://github.com/Yunaka1269/Pewlett_Hackard_Analysis1/blob/main/Data/unique_titles.csv). DISTINCT ON statement is used to remove the duplicate entries ORDER BY emp_no ASC and from_date DESC. 
+
 -see [the number of retire-ready employees breakdown by the tile](https://github.com/Yunaka1269/Pewlett_Hackard_Analysis1/blob/main/Data/retiring_title.csv). There are total of 90,398 retirement-ready employees who were born between Jan 1,1952 and Dec 31, 1955. 
+
 -Attached is [the list of employees who are eligible to participate in mentorship program](https://github.com/Yunaka1269/Pewlett_Hackard_Analysis1/blob/main/Data/mentorship_eligibility.csv). The qualified amployees are filtered based on their birth date between Jan 1,1965 and Dec 31, 1965.
 
 ####Resources
