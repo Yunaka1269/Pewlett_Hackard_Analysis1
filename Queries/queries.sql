@@ -23,10 +23,6 @@ FROM employees
 WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
 
-SELECT * FROM retirement_info;
-
-DROP TABLE retirement_info;
-
 -- Create new table for retiring employees
 SELECT emp_no, first_name, last_name
 INTO retirement_info
@@ -83,8 +79,6 @@ LEFT JOIN dept_emp as de
 ON ri.emp_no = de.emp_no
 WHERE de.to_date = ('9999-01-01');
 
-SELECT * FROM current_emp;
-
 -- Employee count by department number
 SELECT COUNT(ce.emp_no), de.dept_no
 INTO current_emp_count
@@ -93,9 +87,6 @@ LEFT JOIN dept_emp as de
 ON ce.emp_no = de.emp_no
 GROUP BY de.dept_no
 ORDER BY de.dept_no;
-
-SELECT * FROM current_emp_count;
-DROP TABLE current_emp_count;
 
 SELECT * FROM salaries
 ORDER BY to_date DESC;
@@ -121,11 +112,11 @@ SELECT  dm.dept_no,
         dm.to_date
 INTO manager_info
 FROM dept_manager AS dm
-    INNER JOIN departments AS d
-        ON (dm.dept_no = d.dept_no)
-    INNER JOIN current_emp AS ce
-        ON (dm.emp_no = ce.emp_no);
-		
+INNER JOIN departments AS d
+ON (dm.dept_no = d.dept_no)
+INNER JOIN current_emp AS ce
+ON (dm.emp_no = ce.emp_no);
+
 SELECT ce.emp_no,
 ce.first_name,
 ce.last_name,
@@ -136,8 +127,6 @@ INNER JOIN dept_emp AS de
 ON (ce.emp_no = de.emp_no)
 INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no);
-
-SELECT * FROM sales_info;
 
 SELECT ri.emp_no,
 ri.first_name,
