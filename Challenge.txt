@@ -1,0 +1,24 @@
+##
+### using SQL query to create tables for determining the number of retiring employees by title and for identifying the number of employees who are eligible to participate in a mentorship program.
+
+####Result
+-Because of switching the titles, there are duplicate entries in database for some employees.
+-Unique title table use DISTINCT ON statement to remove the duplicates with ORDER BY emp_no ASC plus from_date DESC 
+-There are 90,398 retirement-ready employees who were born between Jan 1,1952 and Dec 31, 1955. See Breakdown by the title.
+-Table shows the list of employees who are eligible to participate in mentorship program.
+
+####Resources
+-Data Source
+	-departmments.csv
+	-dept_emp.csv
+	-dept_manager.csv
+	-employees.csv
+	-salaries.csv
+	-titles.csv
+
+-Software
+	-postgresql 12.4.1
+	-pgAdmin version 4.24
+
+###
+-There are 1,549 qualified employees, who were born in the year 1965, eligible to participate for the mentorship program. This is not sufficient number to fill in the roles. Even if "silver tsunami" eligibility is changed to the person whose birth dates are between Jan 1, 1962 and Dec 31, 1965, the number of eligible employees changes to 56,859 which is about 63%. Therefore, Pewlett Hackard will require to hire the rest from outside.
