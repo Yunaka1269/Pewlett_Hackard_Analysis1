@@ -16,14 +16,20 @@
 
 -Data Source
 	-departmments.csv
+	
 	-dept_emp.csv
+	
 	-dept_manager.csv
+	
 	-employees.csv
+	
 	-salaries.csv
+	
 	-titles.csv
 
 -Software
 	-postgresql 12.4.1
+	
 	-pgAdmin version 4.24
   
 ##Summary
